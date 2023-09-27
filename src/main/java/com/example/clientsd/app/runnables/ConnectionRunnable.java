@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Objects;
 import java.util.concurrent.BlockingQueue;
 
 public class ConnectionRunnable implements Runnable {
@@ -20,13 +21,10 @@ public class ConnectionRunnable implements Runnable {
     }
 
     @Override
-
-
-
     public void run() {
-        Socket socket = null;
-        PrintWriter out = null;
-        BufferedReader in = null;
+        Socket socket;
+        PrintWriter out;
+        BufferedReader in;
 
         try {
             socket = new Socket(this.ip,this.port);
@@ -35,12 +33,16 @@ public class ConnectionRunnable implements Runnable {
 
             while (true) {
                 String message = queue.take();
+                if (Objects.equals(message, "die")) {
+                    break;
+                }
+
+
                 System.out.println("Enviado: "+message);
                 out.println(message);
 
                 // end loop
-                if (message.equals("Bye."))
-                    break;
+
 
                 System.out.println("echo: " + in.readLine());
             }

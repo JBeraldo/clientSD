@@ -5,7 +5,7 @@ import com.example.clientsd.app.packages.BasePackage;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class ActionHandler {
-    public BasePackage dispatch(String response_action) throws JsonProcessingException {
+    public BasePackage dispatch(String response_action) {
         //            case "pedido-edicao-usuario":
         //                return new BasePackage(response_action,login_data,false,null);
         //            case "listar-usuarios":

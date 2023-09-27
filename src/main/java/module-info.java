@@ -2,7 +2,7 @@ module com.example.clientsd {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.fasterxml.jackson.databind;
-
+    requires org.apache.commons.codec;
 
     exports com.example.clientsd.view.address;
     exports com.example.clientsd.view;
@@ -15,5 +15,6 @@ module com.example.clientsd {
     opens com.example.clientsd.view.address to javafx.fxml;
     opens com.example.clientsd.view.login to javafx.fxml;
     opens com.example.clientsd.view to javafx.fxml;
+    exports com.example.clientsd.view.base to com.fasterxml.jackson.databind;
 
 }

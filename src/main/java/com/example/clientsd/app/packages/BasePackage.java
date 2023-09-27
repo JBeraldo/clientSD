@@ -12,7 +12,7 @@ public class BasePackage {
     private String action;
     private ResponseData data;
 
-    private ObjectMapper jackson = new ObjectMapper();
+    private final ObjectMapper jackson = new ObjectMapper();
 
     public BasePackage(String action, ResponseData data) {
         this.action = action;

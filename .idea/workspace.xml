@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="inclusão arquivos intelij">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/actions/ActionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/actions/ActionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login/LoginData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/packages/BasePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/packages/BasePackage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/runnables/ConnectionRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/runnables/ConnectionRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/address/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/base/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/clientsd/view/address.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/clientsd/view/address.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/beras/IdeaProjects/ClientSD/src/main/java/com/example/clientsd/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/beras/IdeaProjects/ClientSD/src/main/java/com/example/clientsd/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/app" />
@@ -83,7 +96,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Cliente" type="Application" factoryName="Application">
+    <configuration name="Cliente" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="com.example.clientsd.view.Client" />
       <module name="clientSD" />
       <method v="2">
@@ -105,6 +118,10 @@
       <workItem from="1695260235763" duration="3000" />
       <workItem from="1695314055951" duration="234000" />
       <workItem from="1695498646470" duration="19509000" />
+      <workItem from="1695522382395" duration="296000" />
+      <workItem from="1695581078547" duration="10042000" />
+      <workItem from="1695652374732" duration="409000" />
+      <workItem from="1695763601677" duration="8566000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />

@@ -1,6 +1,8 @@
 package com.example.clientsd.app.data.login;
 
 import com.example.clientsd.app.base.ResponseData;
+import org.apache.commons.codec.digest.DigestUtils;
+
 
 public class LoginData extends ResponseData {
     private String email;
@@ -8,7 +10,7 @@ public class LoginData extends ResponseData {
 
     public LoginData(String email, String password) {
         this.email = email;
-        this.password = password;
+        this.password = passwordMD5(password);
     }
 
     public String getEmail() {
@@ -25,5 +27,9 @@ public class LoginData extends ResponseData {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String passwordMD5(String password) {
+        return DigestUtils.md5Hex(password).toUpperCase();
     }
 }
