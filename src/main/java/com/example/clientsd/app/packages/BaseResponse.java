@@ -1,24 +1,21 @@
 package com.example.clientsd.app.packages;
 
-
 import com.example.clientsd.app.base.ResponseData;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class BasePackage {
+@JsonInclude(Include.NON_NULL)
+public class BaseResponse {
 
     private String action;
+
     private ResponseData data;
 
-    private final ObjectMapper jackson = new ObjectMapper();
+    private boolean error;
 
-    public BasePackage(String action, ResponseData data) {
-        this.action = action;
-        this.data = data;
-    }
+    private String message;
 
     public String getAction() {
         return action;
@@ -35,6 +32,34 @@ public class BasePackage {
     public void setData(ResponseData data) {
         this.data = data;
     }
+
+    public boolean isError() {
+        return error;
+    }
+
+    public void setError(boolean error) {
+        this.error = error;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public BaseResponse() {
+        // Default constructor
+    }
+    public BaseResponse(String action, ResponseData data, boolean error, String message) {
+        this.action = action;
+        this.data = data;
+        this.error = error;
+        this.message = message;
+    }
+
+    ObjectMapper jackson = new ObjectMapper();
     public String toJson() throws JsonProcessingException {
         return jackson.writeValueAsString(this);
     }
@@ -43,22 +68,5 @@ public class BasePackage {
         return jackson.readValue(json, generic_response);
     }
 
-    public static BaseResponse simpleFromJson(String json) {
-        ObjectMapper jackson = new ObjectMapper();
-        jackson.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        try {
-            return jackson.readValue(json, BaseResponse.class);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
-    @Override
-    public String toString() {
-        try {
-            return this.toJson();
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }

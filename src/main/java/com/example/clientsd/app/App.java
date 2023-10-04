@@ -1,30 +1,67 @@
 package com.example.clientsd.app;
 
-import com.example.clientsd.app.packages.BasePackage;
-import com.example.clientsd.app.runnables.ConnectionRunnable;
 
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
 public class App {
-   private final static BlockingQueue<String> queue = new LinkedBlockingQueue<>();
 
-    public static void connect(String ip,Integer port) {
-            ConnectionRunnable connection_runnable = new ConnectionRunnable(queue,ip,port);
-            Thread connection_thread = new Thread(connection_runnable);
-            connection_thread.start();
+    public Socket socket;
+    public PrintWriter out;
+    public  BufferedReader in;
+
+    public App(String ip, Integer port) {
+        connect(ip,port);
     }
 
-    public static void sendPackage(BasePackage message) throws InterruptedException {
-        String json = message.toString();
-        queue.put(json);
+    public App() {
     }
 
-    public static void die(){
+    public void connect(String ip, Integer port) {
         try {
-            queue.put("die");
-        } catch (InterruptedException e) {
-            System.exit(1);
+            socket = new Socket(ip, port);
+            out = new PrintWriter(socket.getOutputStream(), true);
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+
+    }
+
+    public void die(){
+        try {
+            out.close();
+            in.close();
+            socket.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public void setSocket(Socket socket) {
+        this.socket = socket;
+    }
+
+    public PrintWriter getOut() {
+        return out;
+    }
+
+    public void setOut(PrintWriter out) {
+        this.out = out;
+    }
+
+    public BufferedReader getIn() {
+        return in;
+    }
+
+    public void setIn(BufferedReader in) {
+        this.in = in;
     }
 }

@@ -1,10 +1,17 @@
 package com.example.clientsd.view.base;
 
+import com.example.clientsd.app.App;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
-public class BaseController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class BaseController implements Initializable {
+
+    App app;
 
     public Stage getStage(Node element){
         return (Stage) element.getScene().getWindow();
@@ -16,11 +23,27 @@ public class BaseController {
         alert.setContentText(content);
         alert.showAndWait();
     }
-    public void warningAlert(String title,String header,String content){
+    public void warningAlert(String title,String header,String content) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
         alert.showAndWait();
+    }
+
+    public App getApp() {
+        return app;
+    }
+
+    public void setApp(App app) {
+        this.app = app;
+    }
+
+    public BaseController() {
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.app = getApp();
     }
 }

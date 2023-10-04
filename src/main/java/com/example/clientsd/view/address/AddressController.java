@@ -16,10 +16,12 @@ public class AddressController extends BaseController {
     @FXML
     public TextField ip = new TextField();
     public Button connect_btn = new Button();
-
     @FXML
     protected void onHelloButtonClick()  throws InterruptedException{
         connect();
+    }
+
+    public AddressController() {
     }
 
     protected void connect() throws InterruptedException {
@@ -31,8 +33,8 @@ public class AddressController extends BaseController {
             errorAlert("erro","Erro ao informar porta",e.getMessage());
             return;
         }
-        App.connect(ip_value,port_value);
-        Client.changeScreen(getStage(connect_btn),"login/login.fxml");
+        setApp(new App(ip_value,port_value));
+        Client.changeScreen(getStage(connect_btn),"login/login.fxml",getApp());
     }
 
     protected Integer extractPortNumber(TextField element) throws Exception {

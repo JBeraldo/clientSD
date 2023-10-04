@@ -6,19 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="inclusão arquivos intelij">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login/LoginRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login/LoginResponseData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/logout/LogoutRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/packages/BaseResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/packages/login/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/packages/logout/LogoutResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/actions/ActionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/actions/ActionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login/LoginData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/actions/ActionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login/LoginData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/packages/BasePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/packages/BasePackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/runnables/ConnectionRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/runnables/ConnectionRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/repositories/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/repositories/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/runnables/ConnectionRunnable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/address/AddressController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/base/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/login/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/clientsd/view/address.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/clientsd/view/address.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +71,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/beras/IdeaProjects/ClientSD/src/main/java/com/example/clientsd/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/beras/IdeaProjects/ClientSD/src/main/java/com/example/clientsd/app/data/login&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,6 +86,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/app" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/login" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/clientsd/view/address" />
@@ -89,9 +95,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/clientsd/view/address/login" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.clientsd.app.data.login" />
       <recent name="com.example.clientsd.view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.clientsd.app.packages" />
       <recent name="com.example.clientsd.app.base" />
     </key>
   </component>
@@ -121,7 +129,15 @@
       <workItem from="1695522382395" duration="296000" />
       <workItem from="1695581078547" duration="10042000" />
       <workItem from="1695652374732" duration="409000" />
-      <workItem from="1695763601677" duration="8566000" />
+      <workItem from="1695763601677" duration="9255000" />
+      <workItem from="1695823428732" duration="46000" />
+      <workItem from="1695827415788" duration="8460000" />
+      <workItem from="1695937004140" duration="6749000" />
+      <workItem from="1696015970997" duration="597000" />
+      <workItem from="1696025870164" duration="775000" />
+      <workItem from="1696094424336" duration="597000" />
+      <workItem from="1696365762477" duration="4708000" />
+      <workItem from="1696377283116" duration="2005000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />

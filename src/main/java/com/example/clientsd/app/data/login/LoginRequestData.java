@@ -3,12 +3,14 @@ package com.example.clientsd.app.data.login;
 import com.example.clientsd.app.base.ResponseData;
 import org.apache.commons.codec.digest.DigestUtils;
 
-
-public class LoginData extends ResponseData {
+public class LoginRequestData extends ResponseData {
     private String email;
     private String password;
 
-    public LoginData(String email, String password) {
+    public LoginRequestData(){
+    }
+
+    public LoginRequestData(String email, String password) {
         this.email = email;
         this.password = passwordMD5(password);
     }

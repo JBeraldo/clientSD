@@ -1,17 +1,21 @@
 package com.example.clientsd.view.login;
 
+import com.example.clientsd.app.App;
 import com.example.clientsd.app.repositories.LoginRepository;
 import com.example.clientsd.view.Client;
 import com.example.clientsd.view.base.BaseController;
 import com.example.clientsd.view.helpers.Validator;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class LoginController extends BaseController {
     @FXML
@@ -22,12 +26,12 @@ public class LoginController extends BaseController {
 
     private LoginRepository login_repository;
 
-    public LoginController(){
-        this.login_repository = new LoginRepository();
+    public LoginController() {
     }
 
     @FXML
     protected void login() throws InterruptedException {
+        this.login_repository = new LoginRepository(super.getApp());
         String email = email_tf.getText();
         String password = passwd_tf.getText();
         if(password.length() < 6){
@@ -42,7 +46,10 @@ public class LoginController extends BaseController {
             warningAlert("Aviso","Preencha todos os campos","Preencha todos os campos");
             return;
         }
-        login_repository.login(email,password);
+        boolean isLogged = login_repository.login(email,password);
+        if(isLogged){
+            login_repository.logout();
+        }
     }
 
     protected boolean validateEmpty(String email,String password){
@@ -55,4 +62,8 @@ public class LoginController extends BaseController {
         return true;
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
