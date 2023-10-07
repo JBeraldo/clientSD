@@ -1,33 +1,39 @@
 package com.sd.client.app.repositories;
 
 import com.sd.client.app.App;
+import com.sd.client.app.base.BaseRepository;
 import com.sd.client.app.base.ResponseData;
 import com.sd.client.app.data.login.LoginRequestData;
 import com.sd.client.app.data.logout.LogoutRequestData;
 import com.sd.client.app.packages.BasePackage;
 import com.sd.client.app.packages.login.LoginResponse;
 import com.sd.client.app.packages.logout.LogoutResponse;
+import com.sd.client.view.base.ValidationResponse;
+import com.sd.client.view.base.Validator;
+import com.sd.client.view.login.LoginValidator;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Properties;
 
-public class LoginRepository {
+public class LoginRepository extends BaseRepository {
 
-    private App app;
-    Properties properties = new Properties();
     public LoginRepository(App app) {
-        this.app =  app;
-
+        super(app);
     }
 
     public boolean login(String email, String password) {
+        ValidationResponse validationResponse = LoginValidator.validate(password,email);
+        if (validationResponse.isError()){
+            Validator.errorAlert(validationResponse);
+            return false;
+        }
         ResponseData data = new LoginRequestData(email,password);
         BasePackage request = new BasePackage("login",data);
         String json = request.toString();
-        app.getOut().println(json);
+        super.app.getOut().println(json);
         return waitLoginResponse(email);
     }
+
 
     private boolean waitLoginResponse(String email){
         LoginResponse response;
@@ -38,8 +44,8 @@ public class LoginRepository {
                 if ((response_data = app.getIn().readLine()) != null) {
                     response = LoginResponse.fromJson(response_data, LoginResponse.class);
                     if (response.isError()) return false;
-                    properties.setProperty("current_user_token", response.getData().getToken());
-                    properties.store(new FileOutputStream("tokens.properties"), null);
+                    super.properties.setProperty("current_user_token", response.getData().getToken());
+                    super.properties.store(new FileOutputStream("tokens.properties"), null);
                     return true;
                 }
             } catch (IOException e) {

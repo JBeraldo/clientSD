@@ -14,10 +14,13 @@ module com.example.clientsd {
     exports com.sd.client.app.packages.login to com.fasterxml.jackson.databind;
     exports com.sd.client.app.data.logout to com.fasterxml.jackson.databind;
     exports com.sd.client.app.packages.logout to com.fasterxml.jackson.databind;
+    exports com.sd.client.app.data.user to com.fasterxml.jackson.databind;
+
 
     opens com.sd.client.view.address to javafx.fxml;
     opens com.sd.client.view.login to javafx.fxml;
     opens com.sd.client.view.menu to javafx.fxml;
+    opens com.sd.client.view.user to javafx.fxml;
     opens com.sd.client.view to javafx.fxml;
     exports com.sd.client.view.base to com.fasterxml.jackson.databind;
 

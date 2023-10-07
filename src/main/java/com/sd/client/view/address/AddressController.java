@@ -3,6 +3,8 @@ package com.sd.client.view.address;
 import com.sd.client.app.App;
 import com.sd.client.view.Client;
 import com.sd.client.view.base.BaseController;
+import com.sd.client.view.base.ValidationResponse;
+import com.sd.client.view.base.Validator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -29,7 +31,7 @@ public class AddressController extends BaseController {
         try {
             port_value = extractPortNumber(port);
         } catch (Exception e) {
-            errorAlert("erro","Erro ao informar porta",e.getMessage());
+            Validator.errorAlert(new ValidationResponse("erro","Erro ao informar porta",e.getMessage()));
             return;
         }
         setApp(new App(ip_value,port_value));
