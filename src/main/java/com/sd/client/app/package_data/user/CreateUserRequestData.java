@@ -1,4 +1,4 @@
-package com.sd.client.app.data.user;
+package com.sd.client.app.package_data.user;
 
 import com.sd.client.app.base.ResponseData;
 import com.sd.client.app.models.User;

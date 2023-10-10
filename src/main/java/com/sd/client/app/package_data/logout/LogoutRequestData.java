@@ -1,4 +1,4 @@
-package com.sd.client.app.data.logout;
+package com.sd.client.app.package_data.logout;
 
 import com.sd.client.app.base.ResponseData;
 

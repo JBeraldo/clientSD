@@ -1,4 +1,4 @@
-package com.sd.client.app.data.login;
+package com.sd.client.app.package_data.login;
 
 import com.sd.client.app.base.ResponseData;
 import org.apache.commons.codec.digest.DigestUtils;

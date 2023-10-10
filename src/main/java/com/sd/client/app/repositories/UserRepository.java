@@ -3,8 +3,7 @@ package com.sd.client.app.repositories;
 import com.sd.client.app.App;
 import com.sd.client.app.base.BaseRepository;
 import com.sd.client.app.base.ResponseData;
-import com.sd.client.app.data.login.LoginRequestData;
-import com.sd.client.app.data.user.CreateUserRequestData;
+import com.sd.client.app.package_data.user.CreateUserRequestData;
 import com.sd.client.app.models.User;
 import com.sd.client.app.packages.BasePackage;
 

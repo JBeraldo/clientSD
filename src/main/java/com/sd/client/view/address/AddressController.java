@@ -25,26 +25,17 @@ public class AddressController extends BaseController {
     public AddressController() {
     }
 
-    protected void connect() throws InterruptedException {
+    protected void connect() {
         String ip_value = ip.getText();
-        Integer port_value;
-        try {
-            port_value = extractPortNumber(port);
-        } catch (Exception e) {
-            Validator.errorAlert(new ValidationResponse("erro","Erro ao informar porta",e.getMessage()));
-            return;
+        String port_value = port.getText();
+        if(ip_value.equals("") && port_value.equals("")){
+            setApp(new App("127.0.0.1",8080));
+        }else{
+            setApp(new App(ip_value,Integer.valueOf(port_value)));
         }
-        setApp(new App(ip_value,port_value));
         Client.changeScreen(getStage(connect_btn),"login/login.fxml",getApp());
     }
 
-    protected Integer extractPortNumber(TextField element) throws Exception {
-        String text = element.getText();
-        if (!Objects.equals(text, "")){
-            return Integer.parseInt(element.getText());
-        }
-        throw new Exception("Nenhum valor informado");
-    }
 
 
 }
