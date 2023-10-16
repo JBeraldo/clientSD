@@ -1,6 +1,10 @@
 package com.sd.client.app.base;
 
 import com.sd.client.app.App;
+import com.sd.client.app.packages.BasePackage;
+import com.sd.client.app.packages.BaseResponse;
+import com.sd.client.view.base.ValidationResponse;
+import com.sd.client.view.base.Validator;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,6 +28,7 @@ public class BaseRepository {
             throw new RuntimeException(e);
         }
     }
+
     public BaseRepository(App app) {
         this.app =  app;
     }

@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="create user request">
+    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="create user finalizado">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/exceptions/ResponseErroException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/SimpleResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/ResponseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/data/login/LoginRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/login/LoginRequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/data/login/LoginResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/login/LoginResponseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/data/logout/LogoutRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/logout/LogoutRequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/data/user/CreateUserRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/user/CreateUserRequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/login/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/login/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/user/CreateUserRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/user/CreateUserRequestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/LoginRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/address/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/ValidationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/ValidationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/menu/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/CreateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/CreateUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +70,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/beras/IdeaProjects/ClientSD/src/main/java/com/example/clientsd/app/data/login&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/beras/IdeaProjects/ClientSD/src/main/resources/com/sd/client/view/menu&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,6 +85,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/app" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/login" />
@@ -148,6 +153,13 @@
       <workItem from="1696689754548" duration="2627000" />
       <workItem from="1696694282684" duration="10038000" />
       <workItem from="1696773689314" duration="3510000" />
+      <workItem from="1696947324824" duration="645000" />
+      <workItem from="1696980485775" duration="3703000" />
+      <workItem from="1697060888758" duration="5522000" />
+      <workItem from="1697212291576" duration="597000" />
+      <workItem from="1697246064319" duration="2319000" />
+      <workItem from="1697302381330" duration="2938000" />
+      <workItem from="1697391295650" duration="1209000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -181,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696704690126</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create user finalizado">
+      <option name="closed" value="true" />
+      <created>1696947368984</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696947368984</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +212,8 @@
     <MESSAGE value="inclusão arquivos intelij" />
     <MESSAGE value="login e logout" />
     <MESSAGE value="create user request" />
-    <option name="LAST_COMMIT_MESSAGE" value="create user request" />
+    <MESSAGE value="create user finalizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="create user finalizado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

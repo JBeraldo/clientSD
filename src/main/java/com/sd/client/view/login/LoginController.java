@@ -1,5 +1,6 @@
 package com.sd.client.view.login;
 
+import com.sd.client.app.repositories.AuthRepository;
 import com.sd.client.app.repositories.LoginRepository;
 import com.sd.client.view.Client;
 import com.sd.client.view.base.BaseController;
@@ -25,9 +26,8 @@ public class LoginController extends BaseController {
         this.login_repository = new LoginRepository(super.getApp());
         String email = email_tf.getText();
         String password = passwd_tf.getText();
-        if(login_repository.login(email,password)){
-            Client.changeScreen(getStage(login_btn),"menu/menu.fxml",getApp());
-        }
+        String next_screen = login_repository.login(email,password);
+        Client.changeScreen(getStage(login_btn),next_screen,getApp());
     }
 
 

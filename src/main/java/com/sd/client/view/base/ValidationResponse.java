@@ -18,6 +18,12 @@ public class ValidationResponse {
         this.content = null;
         this.error = false;
     }
+    public ValidationResponse(String content) {
+        this.title = null;
+        this.header = null;
+        this.content = content;
+        this.error = false;
+    }
 
     public boolean isError() {
         return error;

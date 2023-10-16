@@ -1,6 +1,11 @@
 package com.sd.client.app;
 
 
+import com.sd.client.app.exceptions.ResponseErroException;
+import com.sd.client.app.packages.SimpleResponse;
+import com.sd.client.view.base.ValidationResponse;
+import com.sd.client.view.base.Validator;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,14 +36,20 @@ public class App {
 
     }
 
-    public void die(){
-        try {
-            out.close();
-            in.close();
-            socket.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+    public String read() throws IOException, ResponseErroException {
+        String raw_response =  getIn().readLine();
+        if(raw_response != null){
+            SimpleResponse simpleResponse = SimpleResponse.fromJson(raw_response, SimpleResponse.class);
+            if (simpleResponse.isError()){
+                Validator.responseErrors(simpleResponse);
+                throw new ResponseErroException();
+            }
+            else{
+                Validator.successAlert(new ValidationResponse(simpleResponse.getMessage()));
+            }
+            return raw_response;
         }
+        throw new ResponseErroException();
     }
 
     public Socket getSocket() {

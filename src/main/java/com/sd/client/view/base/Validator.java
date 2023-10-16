@@ -1,5 +1,6 @@
 package com.sd.client.view.base;
 
+import com.sd.client.app.packages.SimpleResponse;
 import javafx.scene.control.Alert;
 
 public class Validator {
@@ -17,6 +18,21 @@ public class Validator {
         alert.setHeaderText(validationResponse.getHeader());
         alert.setContentText(validationResponse.getContent());
         alert.showAndWait();
+    }
+    public static void successAlert(ValidationResponse validationResponse) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(validationResponse.getTitle());
+        alert.setHeaderText(validationResponse.getHeader());
+        alert.setContentText(validationResponse.getContent());
+        alert.showAndWait();
+    }
+
+    public static SimpleResponse responseErrors(SimpleResponse simpleResponse){
+        if(simpleResponse.isError()){
+            ValidationResponse vr = new ValidationResponse("Erro","Ação retornou o seguinte erro",simpleResponse.getMessage());
+            Validator.errorAlert(vr);
+        }
+        return simpleResponse;
     }
 
 }

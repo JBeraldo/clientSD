@@ -1,13 +1,16 @@
 package com.sd.client.app.package_data.user;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sd.client.app.base.ResponseData;
 import com.sd.client.app.models.User;
 
 public class CreateUserRequestData extends ResponseData {
-
+    @JsonProperty("nome")
     String name;
     String email;
+    @JsonProperty("senha")
     String password;
+    @JsonProperty("tipo")
     String type;
     String token;
 

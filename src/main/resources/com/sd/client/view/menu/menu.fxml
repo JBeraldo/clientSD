@@ -15,7 +15,7 @@
          <MenuItem mnemonicParsing="false" text="Delete" />
        </Menu>
        <Menu mnemonicParsing="false" text="Logout">
-         <MenuItem mnemonicParsing="false" text="About" />
+         <MenuItem mnemonicParsing="false" onAction="#logout" text="Sair" />
        </Menu>
      </MenuBar>
    </top>

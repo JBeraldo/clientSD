@@ -2,6 +2,7 @@ package com.sd.client.view.user;
 
 import com.sd.client.app.models.User;
 import com.sd.client.app.repositories.UserRepository;
+import com.sd.client.view.Client;
 import com.sd.client.view.base.BaseController;
 import com.sd.client.view.base.ValidationResponse;
 import javafx.event.ActionEvent;
@@ -29,6 +30,7 @@ public class CreateUserController extends BaseController {
             return;
         }
         User new_usr = new User(name,password,email,admin);
-        userRepository.create(new_usr);
+        Client.changeScreen(getStage(create_btn),userRepository.create(new_usr),getApp());
+
     }
 }

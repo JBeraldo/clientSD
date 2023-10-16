@@ -3,6 +3,8 @@ module com.example.clientsd {
     requires javafx.fxml;
     requires com.fasterxml.jackson.databind;
     requires org.apache.commons.codec;
+    requires jjwt.api;
+    requires jjwt.impl;
 
     exports com.sd.client.view.address;
     exports com.sd.client.view;
