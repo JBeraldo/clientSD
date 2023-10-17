@@ -21,7 +21,6 @@ public class UserRepository extends BaseRepository {
         ResponseData data = new CreateUserRequestData(new_usr,properties.getProperty("current_user_token"));
         BasePackage request = new BasePackage("cadastro-usuario",data);
         String json = request.toString();
-        System.out.println(json);
         super.app.getOut().println(json);
         return waitCreateResponse();
     }

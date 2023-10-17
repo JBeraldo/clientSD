@@ -5,6 +5,7 @@ module com.example.clientsd {
     requires org.apache.commons.codec;
     requires jjwt.api;
     requires jjwt.impl;
+    requires org.apache.logging.log4j;
 
     exports com.sd.client.view.address;
     exports com.sd.client.view;

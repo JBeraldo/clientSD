@@ -6,9 +6,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BasePackage {
+
+    private static final Logger logger = LogManager.getLogger(BasePackage.class);
 
     private String action;
     private ResponseData data;
@@ -36,7 +40,9 @@ public class BasePackage {
         this.data = data;
     }
     public String toJson() throws JsonProcessingException {
-        return jackson.writeValueAsString(this);
+        String json = jackson.writeValueAsString(this);
+        logger.info("Enviado: "+json);
+        return json;
     }
     public static <T> T fromJson(String json, Class<T> generic_response) throws JsonProcessingException {
         ObjectMapper jackson = new ObjectMapper();

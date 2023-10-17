@@ -1,0 +1,2 @@
+2023-10-16 23:02:58.733 [JavaFX Application Thread] INFO  com.sd.client.app.packages.BasePackage - Enviado: {"action":"login","data":{"email":"admin@example.com","password":"0192023A7BBD73250516F069DF18B500"}}
+2023-10-16 23:02:58.769 [JavaFX Application Thread] INFO  com.sd.client.app.packages.SimpleResponse - Recebido: {"action":"login","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMSIsImFkbWluIjp0cnVlLCJzdWIiOiIxIn0.a91PPh6sjGDlFZSZYPOzQduc6br0KnuWN1V31R2a9eI"},"error":false,"message":"Logado com sucesso"}

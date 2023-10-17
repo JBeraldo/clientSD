@@ -4,9 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sd.client.app.base.ResponseData;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class SimpleResponse {
 
+    private static final Logger logger = LogManager.getLogger(SimpleResponse.class);
 
     private String action;
     @JsonIgnore
@@ -62,6 +65,7 @@ public class SimpleResponse {
     }
     public static <T> T fromJson(String json, Class<T> generic_response) throws JsonProcessingException {
         ObjectMapper jackson = new ObjectMapper();
+        logger.info("Recebido: "+json);
         return jackson.readValue(json, generic_response);
     }
 
