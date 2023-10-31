@@ -10,14 +10,13 @@ module com.example.clientsd {
     exports com.sd.client.view.address;
     exports com.sd.client.view;
     exports com.sd.client.app;
+    exports com.sd.client.app.models;
 
     exports com.sd.client.app.packages to com.fasterxml.jackson.databind;
     exports com.sd.client.app.base to com.fasterxml.jackson.databind;
-    exports com.sd.client.app.package_data.login to com.fasterxml.jackson.databind;
-    exports com.sd.client.app.packages.login to com.fasterxml.jackson.databind;
-    exports com.sd.client.app.package_data.logout to com.fasterxml.jackson.databind;
-    exports com.sd.client.app.packages.logout to com.fasterxml.jackson.databind;
-    exports com.sd.client.app.package_data.user to com.fasterxml.jackson.databind;
+    exports com.sd.client.app.packages.data.login to com.fasterxml.jackson.databind;
+    exports com.sd.client.app.packages.data.logout to com.fasterxml.jackson.databind;
+    exports com.sd.client.app.packages.data.user to com.fasterxml.jackson.databind;
 
 
     opens com.sd.client.view.address to javafx.fxml;
@@ -26,5 +25,7 @@ module com.example.clientsd {
     opens com.sd.client.view.user to javafx.fxml;
     opens com.sd.client.view to javafx.fxml;
     exports com.sd.client.view.base to com.fasterxml.jackson.databind;
+    exports com.sd.client.app.repositories;
+    exports com.sd.client.app.storage;
 
 }

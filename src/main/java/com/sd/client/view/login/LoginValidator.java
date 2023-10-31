@@ -6,9 +6,9 @@ import com.sd.client.view.helpers.ValidateHelper;
 
 public class LoginValidator extends Validator {
     public  static ValidationResponse validate(String password,String email) {
-        if(password.length() < 6){
-            return new ValidationResponse("Aviso","Senha inválida","A senha precisa possuir ao menos 6 caractéres");
-        }
+//        if(password.length() < 6){
+//            return new ValidationResponse("Aviso","Senha inválida","A senha precisa possuir ao menos 6 caractéres");
+//        }
         if(!ValidateHelper.isValidEmail(email)){
             return new ValidationResponse("Aviso","Email inválido","Verifique seu email");
         }

@@ -16,18 +16,26 @@ public class Client extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader loader = new FXMLLoader(Client.class.getResource("address.fxml"));
         Scene scene = new Scene(loader.load(), 320, 240);
-        BaseController controller = loader.getController();
-        controller.setApp(app);
-        stage.setTitle("Client");
+        stage.setTitle("Cliente");
         stage.setScene(scene);
         stage.show();
     }
-    public static void changeScreen(Stage stage,String resource,App app_socket){
+    public static void changeScreen(Stage stage,String resource){
+        try {
+            FXMLLoader loader = new FXMLLoader(Client.class.getResource(resource));
+            BaseController baseController = loader.<BaseController>getController();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+    public static void changeScreen(Stage stage,String resource,Long id){
         try {
             FXMLLoader loader = new FXMLLoader(Client.class.getResource(resource));
             Scene scene = new Scene(loader.load());
-            BaseController controller = loader.getController();
-            controller.setApp(app_socket);
+            BaseController baseController = loader.<BaseController>getController();
+            baseController.setState_id(id);
             stage.setScene(scene);
         }catch (IOException io){
             io.printStackTrace();

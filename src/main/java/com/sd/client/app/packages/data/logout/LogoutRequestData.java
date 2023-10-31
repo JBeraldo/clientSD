@@ -1,15 +1,12 @@
-package com.sd.client.app.package_data.login;
+package com.sd.client.app.packages.data.logout;
 
 import com.sd.client.app.base.ResponseData;
 
-public class LoginResponseData extends ResponseData {
+public class LogoutRequestData extends ResponseData {
     private String token;
 
-    public LoginResponseData(String token) {
+    public LogoutRequestData(String token) {
         this.token = token;
-    }
-
-    public LoginResponseData() {
     }
 
     public String getToken() {

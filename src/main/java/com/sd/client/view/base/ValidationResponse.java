@@ -24,6 +24,12 @@ public class ValidationResponse {
         this.content = content;
         this.error = false;
     }
+    public ValidationResponse(String content,boolean error) {
+        this.title = null;
+        this.header = null;
+        this.content = content;
+        this.error = error;
+    }
 
     public boolean isError() {
         return error;

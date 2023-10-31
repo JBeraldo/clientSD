@@ -18,6 +18,12 @@ public class UserValidator extends Validator {
         }
         return new ValidationResponse();
     }
+    public static ValidationResponse validate(String password, String email,boolean edit) {
+        if (!ValidateHelper.isValidEmail(email)) {
+            return new ValidationResponse("Aviso", "Email inválido", "Verifique seu email");
+        }
+        return new ValidationResponse();
+    }
 
     protected static boolean validateEmpty(String email, String password) {
         if (email == null || email.isEmpty()) return false;

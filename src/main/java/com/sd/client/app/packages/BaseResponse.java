@@ -1,5 +1,6 @@
 package com.sd.client.app.packages;
 
+import com.fasterxml.jackson.databind.JavaType;
 import com.sd.client.app.base.ResponseData;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -7,11 +8,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @JsonInclude(Include.NON_NULL)
-public class BaseResponse {
+public class BaseResponse<T> {
 
     private String action;
 
-    private ResponseData data;
+    private T data;
 
     private boolean error;
 
@@ -25,11 +26,11 @@ public class BaseResponse {
         this.action = action;
     }
 
-    public ResponseData getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(ResponseData data) {
+    public void setData(T data) {
         this.data = data;
     }
 
@@ -52,7 +53,7 @@ public class BaseResponse {
     public BaseResponse() {
         // Default constructor
     }
-    public BaseResponse(String action, ResponseData data, boolean error, String message) {
+    public BaseResponse(String action, T data, boolean error, String message) {
         this.action = action;
         this.data = data;
         this.error = error;
@@ -63,9 +64,10 @@ public class BaseResponse {
     public String toJson() throws JsonProcessingException {
         return jackson.writeValueAsString(this);
     }
-    public static <T> T fromJson(String json, Class<T> generic_response) throws JsonProcessingException {
+    public static <T> BaseResponse<T> fromJson(String json, Class<T> dataClass) throws JsonProcessingException {
         ObjectMapper jackson = new ObjectMapper();
-        return jackson.readValue(json, generic_response);
+        JavaType javaType = jackson.getTypeFactory().constructParametricType(BasePackage.class, dataClass);
+        return jackson.readValue(json, javaType);
     }
 
 

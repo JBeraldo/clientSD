@@ -16,18 +16,18 @@ public class LoginController extends BaseController {
     public TextField passwd_tf;
     public Button login_btn;
 
-    private LoginRepository login_repository;
+    LoginRepository login_repository = new LoginRepository();
+
 
     public LoginController() {
     }
 
     @FXML
     protected void login() {
-        this.login_repository = new LoginRepository(super.getApp());
         String email = email_tf.getText();
         String password = passwd_tf.getText();
         String next_screen = login_repository.login(email,password);
-        Client.changeScreen(getStage(login_btn),next_screen,getApp());
+        Client.changeScreen(getStage(login_btn),next_screen);
     }
 
 

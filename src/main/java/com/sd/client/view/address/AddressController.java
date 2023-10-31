@@ -1,6 +1,7 @@
 package com.sd.client.view.address;
 
 import com.sd.client.app.App;
+import com.sd.client.app.repositories.ConnectionRepository;
 import com.sd.client.view.Client;
 import com.sd.client.view.base.BaseController;
 import com.sd.client.view.base.ValidationResponse;
@@ -28,12 +29,8 @@ public class AddressController extends BaseController {
     protected void connect() {
         String ip_value = ip.getText();
         String port_value = port.getText();
-        if(ip_value.equals("") && port_value.equals("")){
-            setApp(new App("127.0.0.1",8080));
-        }else{
-            setApp(new App(ip_value,Integer.valueOf(port_value)));
-        }
-        Client.changeScreen(getStage(connect_btn),"login/login.fxml",getApp());
+        ConnectionRepository.connect(ip_value,port_value);
+        Client.changeScreen(getStage(connect_btn),"login/login.fxml");
     }
 
 

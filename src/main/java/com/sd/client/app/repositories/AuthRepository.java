@@ -1,6 +1,8 @@
 package com.sd.client.app.repositories;
 
+import com.sd.client.app.storage.LoggedUser;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 
 public class AuthRepository {
@@ -9,7 +11,16 @@ public class AuthRepository {
 
     public static boolean isAdmin(String token){
         Claims claims = Jwts.parserBuilder().setSigningKey(SECRET_KEY).build().parseClaimsJws(token).getBody();
-        // Retrieve a specific claim
         return (boolean) claims.get("admin");
+    }
+
+    public static boolean isCurrentUserAdmin(){
+        Claims claims = Jwts.parserBuilder().setSigningKey(SECRET_KEY).build().parseClaimsJws(LoggedUser.token()).getBody();
+        return (boolean) claims.get("admin");
+    }
+
+    public static Long getUserId(String token) {
+        Jws<Claims> jws = Jwts.parserBuilder().setSigningKey(SECRET_KEY).build().parseClaimsJws(token);
+        return Long.parseLong(jws.getBody().getSubject());
     }
 }

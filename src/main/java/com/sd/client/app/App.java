@@ -1,7 +1,7 @@
 package com.sd.client.app;
 
 
-import com.sd.client.app.exceptions.ResponseErroException;
+import com.sd.client.app.exceptions.ResponseErrorException;
 import com.sd.client.app.packages.SimpleResponse;
 import com.sd.client.view.base.ValidationResponse;
 import com.sd.client.view.base.Validator;
@@ -36,20 +36,20 @@ public class App {
 
     }
 
-    public String read() throws IOException, ResponseErroException {
+    public String read() throws IOException, ResponseErrorException {
         String raw_response =  getIn().readLine();
         if(raw_response != null){
             SimpleResponse simpleResponse = SimpleResponse.fromJson(raw_response, SimpleResponse.class);
             if (simpleResponse.isError()){
                 Validator.responseErrors(simpleResponse);
-                throw new ResponseErroException();
+                throw new ResponseErrorException();
             }
             else{
                 Validator.successAlert(new ValidationResponse(simpleResponse.getMessage()));
             }
             return raw_response;
         }
-        throw new ResponseErroException();
+        throw new ResponseErrorException();
     }
 
     public Socket getSocket() {

@@ -17,8 +17,10 @@ public class CreateUserController extends BaseController {
     public Button create_btn;
     public CheckBox admin_chk;
 
+    UserRepository userRepository = new UserRepository();
+
+
     public void create(ActionEvent actionEvent) {
-        UserRepository userRepository = new UserRepository(getApp());
         ValidationResponse validationResponse;
         String name = name_tf.getText();
         String email = email_tf.getText();
@@ -30,7 +32,11 @@ public class CreateUserController extends BaseController {
             return;
         }
         User new_usr = new User(name,password,email,admin);
-        Client.changeScreen(getStage(create_btn),userRepository.create(new_usr),getApp());
+        Client.changeScreen(getStage(create_btn),userRepository.create(new_usr));
 
+    }
+
+    public void back(){
+        Client.changeScreen(getStage(create_btn),"menu/menu_admin.fxml");
     }
 }

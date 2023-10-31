@@ -4,10 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="melhorias inteface">
+    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="inicio segunda entrega">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/DeleteUserRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/EditUserRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/FindSelfUserRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/FindUserRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/FindUserResponseData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/GetUserRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/GetUserResponseData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/AppRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/ConnectionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/LoggedUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/EditUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/ListUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/edit_user.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/list_user.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/BasePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/BasePackage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/exceptions/ResponseErroException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/exceptions/ResponseErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/login/LoginRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/login/LoginRequestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/login/LoginResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/login/LoginResponseData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/logout/LogoutRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/logout/LogoutRequestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/user/CreateUserRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/CreateUserRequestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/login/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/logout/LogoutResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/AuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/AuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/address/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/ValidationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/ValidationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/menu/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/CreateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/CreateUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/create_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/create_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokens.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,33 +94,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/beras/IdeaProjects/ClientSD/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/beras/IdeaProjects/ClientSD/src/main/resources/com/sd/client/view/user&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/app/data/login" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/app" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/clientsd/view/login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/clientsd/view/address/login" />
@@ -86,8 +130,11 @@
       <recent name="com.example.clientsd.view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sd.client.app.packages.package_data.user" />
+      <recent name="com.sd.client.app.packages.user" />
+      <recent name="com.sd.client.app.package_data.user" />
+      <recent name="com.sd.client.view.user" />
       <recent name="com.example.clientsd.app.packages" />
-      <recent name="com.example.clientsd.app.base" />
     </key>
   </component>
   <component name="RunManager">
@@ -149,6 +196,14 @@
       <workItem from="1697391295650" duration="1209000" />
       <workItem from="1697486019115" duration="640000" />
       <workItem from="1697489790660" duration="3324000" />
+      <workItem from="1697508298721" duration="726000" />
+      <workItem from="1697579341341" duration="3863000" />
+      <workItem from="1697666565517" duration="3477000" />
+      <workItem from="1698090212073" duration="830000" />
+      <workItem from="1698186526379" duration="5496000" />
+      <workItem from="1698271008713" duration="1793000" />
+      <workItem from="1698523898036" duration="37081000" />
+      <workItem from="1698773181860" duration="2222000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -211,7 +266,8 @@
     <MESSAGE value="create user request" />
     <MESSAGE value="create user finalizado" />
     <MESSAGE value="melhorias inteface" />
-    <option name="LAST_COMMIT_MESSAGE" value="melhorias inteface" />
+    <MESSAGE value="inicio segunda entrega" />
+    <option name="LAST_COMMIT_MESSAGE" value="inicio segunda entrega" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,6 +10,7 @@
      <MenuBar fx:id="menu_bar" BorderPane.alignment="CENTER">
        <Menu mnemonicParsing="false" text="Usuarios">
          <MenuItem fx:id="add_usr_btn" mnemonicParsing="false" onAction="#createUser" text="Adicionar" />
+            <MenuItem fx:id="list_usr_btn" mnemonicParsing="false" onAction="#listUsers" text="Listar" />
        </Menu>
        <Menu mnemonicParsing="false" text="Rotas">
          <MenuItem mnemonicParsing="false" text="Delete" />
