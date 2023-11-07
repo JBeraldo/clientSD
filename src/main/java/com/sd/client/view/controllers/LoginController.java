@@ -1,10 +1,7 @@
-package com.sd.client.view.login;
+package com.sd.client.view.controllers;
 
-import com.sd.client.app.repositories.AuthRepository;
 import com.sd.client.app.repositories.LoginRepository;
 import com.sd.client.view.Client;
-import com.sd.client.view.base.BaseController;
-import com.sd.client.view.base.ValidationResponse;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

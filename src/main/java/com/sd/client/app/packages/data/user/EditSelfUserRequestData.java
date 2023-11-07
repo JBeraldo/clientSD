@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.sd.client.app.base.ResponseData;
 import com.sd.client.app.models.User;
 
-public class EditUserRequestData extends ResponseData {
-    Long user_id;
+public class EditSelfUserRequestData extends ResponseData {
+    Long id;
     String name;
     String email;
     String password;
@@ -13,11 +13,11 @@ public class EditUserRequestData extends ResponseData {
     String type;
     String token;
 
-    public EditUserRequestData() {
+    public EditSelfUserRequestData() {
     }
 
-    public EditUserRequestData(User user, String token) {
-        user_id = user.getId();
+    public EditSelfUserRequestData(User user, String token) {
+        id = user.getId();
         name = user.getName();
         email = user.getEmail();
         password = user.getPassword();
@@ -65,11 +65,11 @@ public class EditUserRequestData extends ResponseData {
         this.token = token;
     }
 
-    public Long getUser_id() {
-        return user_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 }

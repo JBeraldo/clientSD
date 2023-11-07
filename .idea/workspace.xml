@@ -4,53 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="inicio segunda entrega">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/DeleteUserRequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/EditUserRequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/FindSelfUserRequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/FindUserRequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/FindUserResponseData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/GetUserRequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/GetUserResponseData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/AppRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/ConnectionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/LoggedUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/EditUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/ListUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/edit_user.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/list_user.fxml" afterDir="false" />
+    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="segunda entrega sem autoexclusão">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/DeleteSelfUserRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/EditSelfUserRequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/password_modal.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/base/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/exceptions/ResponseErroException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/exceptions/ResponseErrorException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/login/LoginRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/login/LoginRequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/login/LoginResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/login/LoginResponseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/logout/LogoutRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/logout/LogoutRequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/package_data/user/CreateUserRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/CreateUserRequestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/BaseResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/login/LoginResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/logout/LogoutResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/AuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/AuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/EditUserRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/user/EditUserRequestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/LoginRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/address/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/ValidationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/ValidationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/menu/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/CreateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/CreateUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/ValidationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/validators/ValidationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/base/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/validators/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/helpers/ValidateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/validators/ValidateHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/login/LoginValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/validators/LoginValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/CreateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/CreateUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/EditUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/EditUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/ListUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/ListUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/user/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/validators/UserValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/address.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/address.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/login/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_admin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_user.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/create_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/create_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/edit_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/edit_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/list_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/user/list_user.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tokens.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,9 +48,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -130,11 +117,11 @@
       <recent name="com.example.clientsd.view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sd.client.app.packages.data.user" />
       <recent name="com.sd.client.app.packages.package_data.user" />
       <recent name="com.sd.client.app.packages.user" />
       <recent name="com.sd.client.app.package_data.user" />
       <recent name="com.sd.client.view.user" />
-      <recent name="com.example.clientsd.app.packages" />
     </key>
   </component>
   <component name="RunManager">
@@ -203,7 +190,8 @@
       <workItem from="1698186526379" duration="5496000" />
       <workItem from="1698271008713" duration="1793000" />
       <workItem from="1698523898036" duration="37081000" />
-      <workItem from="1698773181860" duration="2222000" />
+      <workItem from="1698773181860" duration="6710000" />
+      <workItem from="1698876119038" duration="3401000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -253,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697486060575</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="segunda entrega sem autoexclusão">
+      <option name="closed" value="true" />
+      <created>1698777446439</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698777446439</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +263,8 @@
     <MESSAGE value="create user finalizado" />
     <MESSAGE value="melhorias inteface" />
     <MESSAGE value="inicio segunda entrega" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicio segunda entrega" />
+    <MESSAGE value="segunda entrega sem autoexclusão" />
+    <option name="LAST_COMMIT_MESSAGE" value="segunda entrega sem autoexclusão" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

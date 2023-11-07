@@ -1,4 +1,4 @@
-package com.sd.client.view.helpers;
+package com.sd.client.view.validators;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

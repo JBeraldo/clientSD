@@ -1,4 +1,4 @@
-package com.sd.client.view.base;
+package com.sd.client.view.controllers;
 
 import com.sd.client.app.App;
 import javafx.beans.property.IntegerProperty;

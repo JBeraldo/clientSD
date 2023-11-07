@@ -5,12 +5,13 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sd.client.view.menu.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sd.client.view.controllers.MenuController">
    <top>
      <MenuBar fx:id="menu_bar" BorderPane.alignment="CENTER">
          <Menu mnemonicParsing="false" text="Usuário">
             <items>
                <MenuItem fx:id="edit_self_btn" mnemonicParsing="false" onAction="#editSelf" text="Editar meu Usuário" />
+               <MenuItem fx:id="destroy_self_btn1" mnemonicParsing="false" onAction="#openDestroySelfModal" text="Excluir meu Usuário" />
             </items>
          </Menu>
        <Menu mnemonicParsing="false" text="Logout">

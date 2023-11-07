@@ -9,9 +9,9 @@ import com.sd.client.app.packages.data.login.LoginResponseData;
 import com.sd.client.app.packages.data.logout.LogoutRequestData;
 import com.sd.client.app.packages.BasePackage;
 import com.sd.client.app.storage.LoggedUser;
-import com.sd.client.view.base.ValidationResponse;
-import com.sd.client.view.base.Validator;
-import com.sd.client.view.login.LoginValidator;
+import com.sd.client.view.validators.ValidationResponse;
+import com.sd.client.view.validators.Validator;
+import com.sd.client.view.validators.LoginValidator;
 
 import java.io.IOException;
 

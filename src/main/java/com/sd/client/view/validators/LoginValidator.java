@@ -1,8 +1,4 @@
-package com.sd.client.view.login;
-
-import com.sd.client.view.base.ValidationResponse;
-import com.sd.client.view.base.Validator;
-import com.sd.client.view.helpers.ValidateHelper;
+package com.sd.client.view.validators;
 
 public class LoginValidator extends Validator {
     public  static ValidationResponse validate(String password,String email) {

@@ -1,4 +1,4 @@
-package com.sd.client.view.base;
+package com.sd.client.view.validators;
 
 import com.sd.client.app.packages.SimpleResponse;
 import javafx.scene.control.Alert;

@@ -1,11 +1,11 @@
-package com.sd.client.view.user;
+package com.sd.client.view.controllers;
 
 import com.sd.client.app.models.User;
 import com.sd.client.app.repositories.AuthRepository;
 import com.sd.client.app.repositories.UserRepository;
 import com.sd.client.view.Client;
-import com.sd.client.view.base.BaseController;
-import com.sd.client.view.base.ValidationResponse;
+import com.sd.client.view.validators.ValidationResponse;
+import com.sd.client.view.validators.UserValidator;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

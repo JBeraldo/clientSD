@@ -86,7 +86,7 @@ public class User {
         return this.id + "   " + this.name;
     }
 
-    public String passwordMD5(String password) {
+    public static String passwordMD5(String password) {
         return !password.isEmpty() ? DigestUtils.md5Hex(password).toUpperCase() : null;
     }
 }

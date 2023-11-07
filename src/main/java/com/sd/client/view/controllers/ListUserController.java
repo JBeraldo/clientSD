@@ -1,9 +1,8 @@
-package com.sd.client.view.user;
+package com.sd.client.view.controllers;
 
 import com.sd.client.app.models.User;
 import com.sd.client.app.repositories.UserRepository;
 import com.sd.client.view.Client;
-import com.sd.client.view.base.BaseController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

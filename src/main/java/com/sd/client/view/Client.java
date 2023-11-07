@@ -1,7 +1,7 @@
 package com.sd.client.view;
 
 import com.sd.client.app.App;
-import com.sd.client.view.base.BaseController;
+import com.sd.client.view.controllers.BaseController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

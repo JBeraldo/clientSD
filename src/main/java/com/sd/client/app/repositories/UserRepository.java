@@ -36,7 +36,13 @@ public class UserRepository extends BaseRepository {
 
     public String update(User updated_usr){
         updated_usr.setType(AuthRepository.isCurrentUserAdmin() ? updated_usr.getType() : null);
-        ResponseData data = new EditUserRequestData(updated_usr, LoggedUser.token());
+        ResponseData data;
+        if(AuthRepository.isCurrentUserAdmin()){
+             data = new EditUserRequestData(updated_usr, LoggedUser.token());
+        }
+        else {
+            data = new EditSelfUserRequestData(updated_usr, LoggedUser.token());
+        }
         String action = AuthRepository.isCurrentUserAdmin() ? "edicao-usuario" : "autoedicao-usuario";
         BasePackage request = new BasePackage(action,data);
         String json = request.toString();
@@ -79,15 +85,34 @@ public class UserRepository extends BaseRepository {
         BasePackage request = new BasePackage("excluir-usuario",data);
         String json = request.toString();
         app.getOut().println(json);
-        waitDeleteResponse();
+        waitDestroyResponse();
     }
 
-    private void waitDeleteResponse() {
+    private void waitDestroyResponse() {
         try {
             app.read();
         } catch (IOException | ResponseErrorException e) {
             super.handleErrors(e);
         }
+    }
+    public boolean destroySelf(String password){
+        User self = findSelf();
+        ResponseData data = new DeleteSelfUserRequestData(LoggedUser.token(),self.getEmail(),password);
+        BasePackage request = new BasePackage("excluir-proprio-usuario",data);
+        String json = request.toString();
+        app.getOut().println(json);
+        return waitDestroySelfResponse();
+    }
+
+    private boolean waitDestroySelfResponse() {
+        try {
+            app.read();
+        } catch (IOException | ResponseErrorException e) {
+            super.handleErrors(e);
+            return false;
+        }
+
+        return true;
     }
 
     public User find(Long id){

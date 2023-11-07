@@ -3,8 +3,8 @@ package com.sd.client.app;
 
 import com.sd.client.app.exceptions.ResponseErrorException;
 import com.sd.client.app.packages.SimpleResponse;
-import com.sd.client.view.base.ValidationResponse;
-import com.sd.client.view.base.Validator;
+import com.sd.client.view.validators.ValidationResponse;
+import com.sd.client.view.validators.Validator;
 
 import java.io.BufferedReader;
 import java.io.IOException;

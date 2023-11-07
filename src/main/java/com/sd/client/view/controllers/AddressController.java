@@ -1,16 +1,10 @@
-package com.sd.client.view.address;
+package com.sd.client.view.controllers;
 
-import com.sd.client.app.App;
 import com.sd.client.app.repositories.ConnectionRepository;
 import com.sd.client.view.Client;
-import com.sd.client.view.base.BaseController;
-import com.sd.client.view.base.ValidationResponse;
-import com.sd.client.view.base.Validator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
-import java.util.Objects;
 
 public class AddressController extends BaseController {
     @FXML

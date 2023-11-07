@@ -1,8 +1,4 @@
-package com.sd.client.view.user;
-
-import com.sd.client.view.base.ValidationResponse;
-import com.sd.client.view.base.Validator;
-import com.sd.client.view.helpers.ValidateHelper;
+package com.sd.client.view.validators;
 
 public class UserValidator extends Validator {
 

@@ -1,4 +1,4 @@
-package com.sd.client.view.base;
+package com.sd.client.view.validators;
 
 public class ValidationResponse {
     String title;

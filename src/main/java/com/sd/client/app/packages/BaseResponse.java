@@ -66,7 +66,7 @@ public class BaseResponse<T> {
     }
     public static <T> BaseResponse<T> fromJson(String json, Class<T> dataClass) throws JsonProcessingException {
         ObjectMapper jackson = new ObjectMapper();
-        JavaType javaType = jackson.getTypeFactory().constructParametricType(BasePackage.class, dataClass);
+        JavaType javaType = jackson.getTypeFactory().constructParametricType(BaseResponse.class, dataClass);
         return jackson.readValue(json, javaType);
     }
 
