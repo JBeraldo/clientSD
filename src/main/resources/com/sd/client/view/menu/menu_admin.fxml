@@ -12,9 +12,18 @@
          <MenuItem fx:id="add_usr_btn" mnemonicParsing="false" onAction="#createUser" text="Adicionar" />
             <MenuItem fx:id="list_usr_btn" mnemonicParsing="false" onAction="#listUsers" text="Listar" />
        </Menu>
-       <Menu mnemonicParsing="false" text="Rotas">
-         <MenuItem mnemonicParsing="false" text="Delete" />
-       </Menu>
+         <Menu mnemonicParsing="false" text="Pontos">
+            <items>
+               <MenuItem fx:id="add_pnt_btn" mnemonicParsing="false" onAction="#createPoint" text="Adicionar" />
+               <MenuItem fx:id="list_pnt_btn" mnemonicParsing="false" onAction="#listPoints" text="Listar" />
+            </items>
+         </Menu>
+         <Menu mnemonicParsing="false" text="Segmentos">
+            <items>
+               <MenuItem fx:id="add_segment_btn" mnemonicParsing="false" onAction="#createSegment" text="Adicionar" />
+               <MenuItem fx:id="list_segments_btn" mnemonicParsing="false" onAction="#listSegments" text="Listar" />
+            </items>
+         </Menu>
        <Menu mnemonicParsing="false" text="Logout">
          <MenuItem mnemonicParsing="false" onAction="#logout" text="Sair" />
        </Menu>

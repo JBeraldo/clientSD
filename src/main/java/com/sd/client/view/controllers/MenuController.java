@@ -20,6 +20,10 @@ public class MenuController extends BaseController {
     public TextField password_tf;
     public Button back_btn;
     public Button destroy_btn;
+    public MenuItem list_pnt_btn;
+    public MenuItem add_pnt_btn;
+    public MenuItem add_segment_btn;
+    public MenuItem list_segments_btn;
     LoginRepository loginRepository = new LoginRepository();
     UserRepository userRepository = new UserRepository();
 
@@ -55,5 +59,23 @@ public class MenuController extends BaseController {
 
     public void openDestroySelfModal(ActionEvent actionEvent) {
         Client.changeScreen(getStage(menu_bar),"user/password_modal.fxml");
+    }
+
+    public void createPoint(ActionEvent actionEvent) {
+        Client.changeScreen(getStage(menu_bar),"point/create_point.fxml");
+    }
+
+    public void listPoints(ActionEvent actionEvent) {
+        Client.changeScreen(getStage(menu_bar),"point/list_points.fxml");
+    }
+
+    public void createSegment(ActionEvent actionEvent) {
+        Client.changeScreen(getStage(menu_bar),"segment/create_segment.fxml");
+
+    }
+
+    public void listSegments(ActionEvent actionEvent) {
+        Client.changeScreen(getStage(menu_bar),"segment/list_segments.fxml");
+
     }
 }

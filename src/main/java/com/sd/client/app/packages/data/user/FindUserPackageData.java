@@ -1,9 +1,9 @@
 package com.sd.client.app.packages.data.user;
 
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 import com.sd.client.app.models.User;
 
-public class FindUserResponseData extends ResponseData {
+public class FindUserPackageData extends PackageData {
     private User user;
 
     public User getUser() {
@@ -14,10 +14,10 @@ public class FindUserResponseData extends ResponseData {
         this.user = user;
     }
 
-    public FindUserResponseData() {
+    public FindUserPackageData() {
     }
 
-    public FindUserResponseData(User user) {
+    public FindUserPackageData(User user) {
         this.user = user;
     }
 }

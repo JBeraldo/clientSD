@@ -1,7 +1,6 @@
 package com.sd.client.app.packages;
 
 import com.fasterxml.jackson.databind.JavaType;
-import com.sd.client.app.base.ResponseData;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;

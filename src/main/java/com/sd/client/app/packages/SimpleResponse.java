@@ -3,7 +3,7 @@ package com.sd.client.app.packages;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,7 +13,7 @@ public class SimpleResponse {
 
     private String action;
     @JsonIgnore
-    private ResponseData data;
+    private PackageData data;
     private boolean error;
 
     private String message;
@@ -51,11 +51,11 @@ public class SimpleResponse {
         this.message = message;
     }
 
-    public ResponseData getData() {
+    public PackageData getData() {
         return data;
     }
 
-    public void setData(ResponseData data) {
+    public void setData(PackageData data) {
         this.data = data;
     }
 

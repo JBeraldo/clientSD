@@ -1,10 +1,10 @@
 package com.sd.client.app.packages.data.user;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 import com.sd.client.app.models.User;
 
-public class EditSelfUserRequestData extends ResponseData {
+public class EditSelfUserRequestData extends PackageData {
     Long id;
     String name;
     String email;

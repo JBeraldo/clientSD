@@ -1,11 +1,13 @@
-package com.sd.client.app.packages.data.user;
+package com.sd.client.app.packages.data.segment;
 
 import com.sd.client.app.base.PackageData;
 
-public class GetUserRequestData extends PackageData {
+public class GetSegmentRequestData extends PackageData {
     private String token;
+    public GetSegmentRequestData(){
+    }
 
-    public GetUserRequestData(String token) {
+    public GetSegmentRequestData(String token) {
         this.token = token;
     }
 

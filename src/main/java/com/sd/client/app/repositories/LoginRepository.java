@@ -1,11 +1,11 @@
 package com.sd.client.app.repositories;
 
 import com.sd.client.app.base.BaseRepository;
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 import com.sd.client.app.exceptions.ResponseErrorException;
 import com.sd.client.app.packages.BaseResponse;
 import com.sd.client.app.packages.data.login.LoginRequestData;
-import com.sd.client.app.packages.data.login.LoginResponseData;
+import com.sd.client.app.packages.data.login.LoginPackageData;
 import com.sd.client.app.packages.data.logout.LogoutRequestData;
 import com.sd.client.app.packages.BasePackage;
 import com.sd.client.app.storage.LoggedUser;
@@ -27,7 +27,7 @@ public class LoginRepository extends BaseRepository {
             Validator.errorAlert(validationResponse);
             return "login/login.fxml";
         }
-        ResponseData data = new LoginRequestData(email, password);
+        PackageData data = new LoginRequestData(email, password);
         BasePackage request = new BasePackage("login", data);
         String json = request.toString();
         super.app.getOut().println(json);
@@ -36,12 +36,12 @@ public class LoginRepository extends BaseRepository {
 
 
     private String waitLoginResponse(String email) {
-        BaseResponse<LoginResponseData> response;
+        BaseResponse<LoginPackageData> response;
         String response_data;
         boolean isAdm;
         try {
             response_data = app.read();
-            response = BaseResponse.fromJson(response_data, LoginResponseData.class);
+            response = BaseResponse.fromJson(response_data, LoginPackageData.class);
             LoggedUser.save(response.getData().getToken());
             isAdm = AuthRepository.isAdmin(LoggedUser.token());
         } catch (IOException | ResponseErrorException e) {
@@ -63,7 +63,7 @@ public class LoginRepository extends BaseRepository {
 
     public boolean logout() {
         String token = LoggedUser.token();
-        ResponseData data = new LogoutRequestData(token);
+        PackageData data = new LogoutRequestData(token);
         BasePackage request = new BasePackage("logout", data);
         super.app.getOut().println(request.toString());
         return waitLogoutResponse();

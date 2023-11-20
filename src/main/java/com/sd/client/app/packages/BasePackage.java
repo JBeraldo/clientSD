@@ -1,7 +1,7 @@
 package com.sd.client.app.packages;
 
 
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -15,11 +15,11 @@ public class BasePackage {
     private static final Logger logger = LogManager.getLogger(BasePackage.class);
 
     private String action;
-    private ResponseData data;
+    private PackageData data;
 
     private final ObjectMapper jackson = new ObjectMapper();
 
-    public BasePackage(String action, ResponseData data) {
+    public BasePackage(String action, PackageData data) {
         this.action = action;
         this.data = data;
     }
@@ -32,11 +32,11 @@ public class BasePackage {
         this.action = action;
     }
 
-    public ResponseData getData() {
+    public PackageData getData() {
         return data;
     }
 
-    public void setData(ResponseData data) {
+    public void setData(PackageData data) {
         this.data = data;
     }
     public String toJson() throws JsonProcessingException {

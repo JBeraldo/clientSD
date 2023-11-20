@@ -1,7 +1,7 @@
 package com.sd.client.app.repositories;
 
 import com.sd.client.app.base.BaseRepository;
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 import com.sd.client.app.exceptions.ResponseErrorException;
 import com.sd.client.app.packages.BaseResponse;
 import com.sd.client.app.packages.data.user.*;
@@ -18,7 +18,7 @@ public class UserRepository extends BaseRepository {
     }
 
     public String create(User new_usr){
-        ResponseData data = new CreateUserRequestData(new_usr, LoggedUser.token());
+        PackageData data = new CreateUserRequestData(new_usr, LoggedUser.token());
         BasePackage request = new BasePackage("cadastro-usuario",data);
         String json = request.toString();
         app.getOut().println(json);
@@ -29,14 +29,14 @@ public class UserRepository extends BaseRepository {
         try {
             app.read();
         } catch (IOException | ResponseErrorException e) {
-            return "user/create_user.fxml";
+            return "user/create_point.fxml";
         }
         return "menu/menu_admin.fxml";
     }
 
     public String update(User updated_usr){
         updated_usr.setType(AuthRepository.isCurrentUserAdmin() ? updated_usr.getType() : null);
-        ResponseData data;
+        PackageData data;
         if(AuthRepository.isCurrentUserAdmin()){
              data = new EditUserRequestData(updated_usr, LoggedUser.token());
         }
@@ -54,13 +54,13 @@ public class UserRepository extends BaseRepository {
         try {
             app.read();
         } catch (IOException | ResponseErrorException e) {
-            return "user/create_user.fxml";
+            return "user/create_point.fxml";
         }
         return AuthRepository.isCurrentUserAdmin() ? "menu/menu_admin.fxml" : "menu/menu_user.fxml";
     }
 
     public ArrayList<User> get(){
-        ResponseData data = new GetUserRequestData(LoggedUser.token());
+        PackageData data = new GetUserRequestData(LoggedUser.token());
         BasePackage request = new BasePackage("listar-usuarios",data);
         String json = request.toString();
         app.getOut().println(json);
@@ -68,11 +68,11 @@ public class UserRepository extends BaseRepository {
     }
 
     private ArrayList<User> waitGetResponse() {
-        BaseResponse<GetUserResponseData> response;
+        BaseResponse<GetUserPackageData> response;
         String response_data;
         try {
             response_data = app.read();
-            response = BaseResponse.fromJson(response_data, GetUserResponseData.class);
+            response = BaseResponse.fromJson(response_data, GetUserPackageData.class);
             return response.getData().getUsers();
         } catch (IOException | ResponseErrorException e) {
             super.handleErrors(e);
@@ -81,7 +81,7 @@ public class UserRepository extends BaseRepository {
     }
 
     public void destroy(User user){
-        ResponseData data = new DeleteUserRequestData(LoggedUser.token(),user.getId());
+        PackageData data = new DeleteUserRequestData(LoggedUser.token(),user.getId());
         BasePackage request = new BasePackage("excluir-usuario",data);
         String json = request.toString();
         app.getOut().println(json);
@@ -97,7 +97,7 @@ public class UserRepository extends BaseRepository {
     }
     public boolean destroySelf(String password){
         User self = findSelf();
-        ResponseData data = new DeleteSelfUserRequestData(LoggedUser.token(),self.getEmail(),password);
+        PackageData data = new DeleteSelfUserRequestData(LoggedUser.token(),self.getEmail(),password);
         BasePackage request = new BasePackage("excluir-proprio-usuario",data);
         String json = request.toString();
         app.getOut().println(json);
@@ -116,7 +116,7 @@ public class UserRepository extends BaseRepository {
     }
 
     public User find(Long id){
-        ResponseData data = new FindUserRequestData(LoggedUser.token(),id);
+        PackageData data = new FindUserRequestData(LoggedUser.token(),id);
         BasePackage request = new BasePackage("pedido-edicao-usuario",data);
         String json = request.toString();
         app.getOut().println(json);
@@ -124,7 +124,7 @@ public class UserRepository extends BaseRepository {
     }
 
     public User findSelf(){
-        ResponseData data = new FindSelfUserRequestData(LoggedUser.token());
+        PackageData data = new FindSelfUserRequestData(LoggedUser.token());
         BasePackage request = new BasePackage("pedido-proprio-usuario",data);
         String json = request.toString();
         app.getOut().println(json);
@@ -132,11 +132,11 @@ public class UserRepository extends BaseRepository {
     }
 
     private User waitFindResponse() {
-        BaseResponse<FindUserResponseData>    response;
+        BaseResponse<FindUserPackageData>    response;
         String response_data;
         try {
             response_data = app.read();
-            response = BaseResponse.fromJson(response_data,FindUserResponseData.class);
+            response = BaseResponse.fromJson(response_data, FindUserPackageData.class);
             return response.getData().getUser();
         } catch (IOException | ResponseErrorException e) {
             super.handleErrors(e);

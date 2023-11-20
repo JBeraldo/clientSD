@@ -1,8 +1,8 @@
 package com.sd.client.app.packages.data.logout;
 
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 
-public class LogoutRequestData extends ResponseData {
+public class LogoutRequestData extends PackageData {
     private String token;
 
     public LogoutRequestData(String token) {

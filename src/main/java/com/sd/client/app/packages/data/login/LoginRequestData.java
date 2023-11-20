@@ -1,9 +1,9 @@
 package com.sd.client.app.packages.data.login;
 
-import com.sd.client.app.base.ResponseData;
+import com.sd.client.app.base.PackageData;
 import org.apache.commons.codec.digest.DigestUtils;
 
-public class LoginRequestData extends ResponseData {
+public class LoginRequestData extends PackageData {
     private String email;
     private String password;
 
