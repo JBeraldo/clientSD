@@ -1,12 +1,15 @@
 package com.sd.client.app.models;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Point {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     Long id;
     String name;
+
+    @JsonProperty("obs")
     String observation;
 
     public Point() {
