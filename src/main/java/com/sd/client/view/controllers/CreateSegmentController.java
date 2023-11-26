@@ -36,7 +36,7 @@ public class CreateSegmentController extends BaseController implements Initializ
         Point origin = origin_cmb.getValue();
         Point destination = destination_cmb.getValue();
         String direction = direction_cmb.getValue();
-        String distance = distance_tf.getText();
+        int distance = Integer.parseInt(distance_tf.getText());
         Segment segment = new Segment(direction,origin,destination,distance,obs);
         Client.changeScreen(getStage(create_btn),segmentRepository.create(segment));
     }

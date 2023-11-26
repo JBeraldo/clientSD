@@ -37,7 +37,7 @@ public class EditSegmentController extends BaseController implements Initializab
         Point origin = origin_cmb.getValue();
         Point destination = destination_cmb.getValue();
         String direction = direction_cmb.getValue();
-        String distance = distance_tf.getText();
+        int distance = Integer.parseInt(distance_tf.getText());
         Segment segment = new Segment(getState_id(),direction,origin,destination,distance,obs);
         Client.changeScreen(getStage(edit_btn),segmentRepository.update(segment));
     }
@@ -58,7 +58,7 @@ public class EditSegmentController extends BaseController implements Initializab
             destination_cmb.setValue(segment.getDestination());
             origin_cmb.setValue(segment.getOrigin());
             direction_cmb.setValue(segment.getDirection());
-            distance_tf.setText(segment.getDistance());
+            distance_tf.setText(Integer.toString(segment.getDistance()));
             obs_ta.setText(segment.getObservation());
         });
     }
