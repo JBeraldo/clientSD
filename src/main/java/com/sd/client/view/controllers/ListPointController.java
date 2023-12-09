@@ -22,10 +22,11 @@ import java.util.ResourceBundle;
 public class ListPointController extends BaseController implements Initializable {
 
     public List<Point> point_ll = new LinkedList<>();
+    public ObservableList<Point> points = FXCollections.observableList(point_ll);
+
     public PointRepository pointRepository = new PointRepository();
     public SelectionModel<Point> selected_point_model;
     public Point selected_point;
-    public ObservableList<Point> points = FXCollections.observableList(point_ll);
     public ListView<Point> point_list;
     public Button refreshButton;
     public Button edit_btn;

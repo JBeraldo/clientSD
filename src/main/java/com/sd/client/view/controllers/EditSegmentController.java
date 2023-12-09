@@ -9,10 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,6 +21,7 @@ public class EditSegmentController extends BaseController implements Initializab
     public ComboBox<String> direction_cmb;
     public TextField distance_tf;
     public TextArea obs_ta;
+    public CheckBox block_chk;
 
     Segment segment = new Segment();
 
@@ -38,7 +36,8 @@ public class EditSegmentController extends BaseController implements Initializab
         Point destination = destination_cmb.getValue();
         String direction = direction_cmb.getValue();
         int distance = Integer.parseInt(distance_tf.getText());
-        Segment segment = new Segment(getState_id(),direction,origin,destination,distance,obs);
+        boolean blocked = block_chk.isSelected();
+        Segment segment = new Segment(getState_id(),direction,origin,destination,distance,obs,blocked);
         Client.changeScreen(getStage(edit_btn),segmentRepository.update(segment));
     }
 
@@ -60,6 +59,7 @@ public class EditSegmentController extends BaseController implements Initializab
             direction_cmb.setValue(segment.getDirection());
             distance_tf.setText(Integer.toString(segment.getDistance()));
             obs_ta.setText(segment.getObservation());
+            block_chk.setSelected(segment.isBlocked());
         });
     }
 }

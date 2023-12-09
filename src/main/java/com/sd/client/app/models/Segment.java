@@ -15,21 +15,25 @@ public class Segment {
     int distance;
     @JsonProperty("obs")
     String observation;
+    @JsonProperty("bloqueado")
+    boolean blocked;
 
-    public Segment(Long id, String direction, Point origin, Point destination, int distance, String observation) {
+    public Segment(Long id, String direction, Point origin, Point destination, int distance, String observation, boolean blocked) {
         this.id = id;
         this.direction = direction;
         this.origin = origin;
         this.destination = destination;
         this.distance = distance;
         this.observation = observation;
+        this.blocked = blocked;
     }
-    public Segment(String direction, Point origin, Point destination, int distance, String observation) {
+    public Segment(String direction, Point origin, Point destination, int distance, String observation,boolean blocked) {
         this.direction = direction;
         this.origin = origin;
         this.destination = destination;
         this.distance = distance;
         this.observation = observation;
+        this.blocked = blocked;
     }
 
     public Segment(CreateSegmentRequestData data) {
@@ -38,6 +42,7 @@ public class Segment {
         this.destination = data.getSegment().getDestination();
         this.distance = data.getSegment().getDistance();
         this.observation = data.getSegment().getObservation();
+        this.blocked = data.getSegment().isBlocked();
     }
 
     public Segment() {
@@ -91,6 +96,15 @@ public class Segment {
     public void setObservation(String observation) {
         this.observation = observation;
     }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
+    }
+
     @Override
     public String toString() {
         return this.id + "   " + this.origin.name+ " -> "+this.destination.name;

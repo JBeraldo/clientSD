@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="Fixes terceira">
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/models/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/models/Segment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/CreateSegmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/CreateSegmentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/EditSegmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/EditSegmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/ListPointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/ListPointController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/segment/create_segment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/segment/create_segment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/segment/edit_segment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/segment/edit_segment.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tokens.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +185,7 @@
       <workItem from="1700666229311" duration="596000" />
       <workItem from="1701030353029" duration="803000" />
       <workItem from="1701031734732" duration="598000" />
+      <workItem from="1701033115970" duration="11078000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -264,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700605618876</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixes terceira">
+      <option name="closed" value="true" />
+      <created>1701033125288</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701033125288</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
