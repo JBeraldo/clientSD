@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sd.client.view.controllers.GenerateRouteController">
+   <children>
+      <ComboBox fx:id="destiny_cmb" layoutX="181.0" layoutY="39.0" prefWidth="150.0" />
+      <ComboBox fx:id="origin_cmb" layoutX="22.0" layoutY="39.0" prefWidth="150.0" />
+      <Label layoutX="77.0" layoutY="18.0" text="Origem" />
+      <Label layoutX="242.0" layoutY="18.0" text="Destino" />
+      <Button fx:id="generate_btn" layoutX="342.0" layoutY="39.0" mnemonicParsing="false" onAction="#generate" text="Gerar" />
+      <TableView fx:id="route_tbl" layoutX="25.0" layoutY="124.0" prefHeight="250.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="index_cell" text="#" />
+          <TableColumn fx:id="origin_cell" text="Ponto inicial do segmento" />
+          <TableColumn fx:id="destin_cell" text="Ponto final do segmento" />
+          <TableColumn fx:id="distance_cell" text="Distancia (m)" />
+          <TableColumn fx:id="direction_cell" text="Direção" />
+          <TableColumn fx:id="observation_cell" text="Observação" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

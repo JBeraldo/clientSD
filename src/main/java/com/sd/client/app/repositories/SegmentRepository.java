@@ -3,6 +3,7 @@ package com.sd.client.app.repositories;
 import com.sd.client.app.base.BaseRepository;
 import com.sd.client.app.base.PackageData;
 import com.sd.client.app.exceptions.ResponseErrorException;
+import com.sd.client.app.models.Point;
 import com.sd.client.app.models.Segment;
 import com.sd.client.app.packages.BasePackage;
 import com.sd.client.app.packages.BaseResponse;
@@ -11,6 +12,7 @@ import com.sd.client.app.storage.LoggedUser;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SegmentRepository extends BaseRepository {
 
@@ -103,6 +105,27 @@ public class SegmentRepository extends BaseRepository {
         } catch (IOException | ResponseErrorException e) {
             super.handleErrors(e);
             return new Segment();
+        }
+    }
+
+    public List<Segment> requestRoute(Point origin,Point destiny){
+        PackageData data = new RequestRouteRequestData(origin,destiny);
+        BasePackage request = new BasePackage("pedido-rotas",data);
+        String json = request.toString();
+        app.getOut().println(json);
+        return waitRequestRouteResponse();
+    }
+
+    private List<Segment> waitRequestRouteResponse() {
+        BaseResponse<RequestRoutePackageData> response;
+        String response_data;
+        try {
+            response_data = app.read();
+            response = BaseResponse.fromJson(response_data, RequestRoutePackageData.class);
+            return response.getData().getSegments();
+        } catch (IOException | ResponseErrorException e) {
+            super.handleErrors(e);
+            return new ArrayList<>();
         }
     }
 }

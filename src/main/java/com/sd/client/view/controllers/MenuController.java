@@ -24,6 +24,7 @@ public class MenuController extends BaseController {
     public MenuItem add_pnt_btn;
     public MenuItem add_segment_btn;
     public MenuItem list_segments_btn;
+    public MenuItem gen_route_btn;
     LoginRepository loginRepository = new LoginRepository();
     UserRepository userRepository = new UserRepository();
 
@@ -77,5 +78,9 @@ public class MenuController extends BaseController {
     public void listSegments(ActionEvent actionEvent) {
         Client.changeScreen(getStage(menu_bar),"segment/list_segments.fxml");
 
+    }
+
+    public void generateRoute(ActionEvent actionEvent) {
+        Client.changeScreen(getStage(menu_bar),"route/generate_route.fxml");
     }
 }
