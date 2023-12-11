@@ -9,10 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -25,6 +22,7 @@ public class CreateSegmentController extends BaseController implements Initializ
     public ComboBox<String> direction_cmb;
     public TextField distance_tf;
     public TextArea obs_ta;
+    public CheckBox block_chk;
 
     PointRepository pointRepository = new PointRepository();
     SegmentRepository segmentRepository = new SegmentRepository();
@@ -37,7 +35,8 @@ public class CreateSegmentController extends BaseController implements Initializ
         Point destination = destination_cmb.getValue();
         String direction = direction_cmb.getValue();
         int distance = Integer.parseInt(distance_tf.getText());
-        Segment segment = new Segment(direction,origin,destination,distance,obs);
+        boolean blocked = block_chk.isSelected();
+        Segment segment = new Segment(direction,origin,destination,distance,obs,blocked);
         Client.changeScreen(getStage(create_btn),segmentRepository.create(segment));
     }
 
