@@ -7,21 +7,21 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sd.client.view.controllers.GenerateRouteController">
+<AnchorPane prefHeight="399.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sd.client.view.controllers.GenerateRouteController">
    <children>
       <ComboBox fx:id="destiny_cmb" layoutX="181.0" layoutY="39.0" prefWidth="150.0" />
       <ComboBox fx:id="origin_cmb" layoutX="22.0" layoutY="39.0" prefWidth="150.0" />
       <Label layoutX="77.0" layoutY="18.0" text="Origem" />
       <Label layoutX="242.0" layoutY="18.0" text="Destino" />
       <Button fx:id="generate_btn" layoutX="342.0" layoutY="39.0" mnemonicParsing="false" onAction="#generate" text="Gerar" />
-      <TableView fx:id="route_tbl" layoutX="25.0" layoutY="124.0" prefHeight="250.0" prefWidth="550.0">
+      <TableView fx:id="route_tbl" layoutX="25.0" layoutY="124.0" prefHeight="250.0" prefWidth="757.0">
         <columns>
-          <TableColumn fx:id="index_cell" text="#" />
-          <TableColumn fx:id="origin_cell" text="Ponto inicial do segmento" />
-          <TableColumn fx:id="destin_cell" text="Ponto final do segmento" />
+          <TableColumn fx:id="index_cell" prefWidth="44.0" text="#" />
+          <TableColumn fx:id="origin_cell" prefWidth="171.0" text="Ponto inicial do segmento" />
+          <TableColumn fx:id="destin_cell" prefWidth="142.0" text="Ponto final do segmento" />
           <TableColumn fx:id="distance_cell" text="Distancia (m)" />
-          <TableColumn fx:id="direction_cell" text="Direção" />
-          <TableColumn fx:id="observation_cell" text="Observação" />
+          <TableColumn fx:id="direction_cell" prefWidth="137.0" text="Direção" />
+          <TableColumn fx:id="observation_cell" prefWidth="182.0" text="Observação" />
         </columns>
       </TableView>
    </children>

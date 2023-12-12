@@ -4,6 +4,7 @@ import com.sd.client.app.models.Point;
 import com.sd.client.app.models.Segment;
 import com.sd.client.app.repositories.PointRepository;
 import com.sd.client.app.repositories.SegmentRepository;
+import javafx.beans.property.ReadOnlyIntegerWrapper;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,7 +26,7 @@ public class GenerateRouteController extends BaseController implements Initializ
     public Button generate_btn;
     public TableView route_tbl;
     @FXML
-    private TableColumn<Segment, String> index_cell;
+    private TableColumn<Segment, Integer> index_cell;
 
     @FXML
     private TableColumn<Segment, String> origin_cell;
@@ -57,9 +58,9 @@ public class GenerateRouteController extends BaseController implements Initializ
         points = FXCollections.observableList(pointRepository.get());
         origin_cmb.setItems(points);
         destiny_cmb.setItems(points);
-        index_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(Long.toString(cellData.getValue().getId())));
-        origin_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getDestination().getName()));
-        destin_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getOrigin().getName()));
+        index_cell.setCellValueFactory(cellData ->new ReadOnlyIntegerWrapper(route_tbl.getItems().indexOf(cellData.getValue()) + 1).getReadOnlyProperty().asObject());
+        origin_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getOrigin().getName()));
+        destin_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getDestination().getName()));
         distance_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(Integer.toString(cellData.getValue().getDistance())));
         direction_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getDirection()));
         observation_cell.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getObservation()));

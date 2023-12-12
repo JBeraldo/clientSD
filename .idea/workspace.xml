@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="Fixes terceira">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/segment/RequestRoutePackageData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/packages/data/segment/RequestRouteRequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/GenerateRouteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/route/generate_route.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="Avanço quarta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/SegmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/repositories/SegmentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/menu/menu_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/GenerateRouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/GenerateRouteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/route/generate_route.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sd/client/view/route/generate_route.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tokens.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -282,6 +275,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inital commit" />
     <MESSAGE value="inclusão arquivos intelij" />
@@ -294,7 +298,8 @@
     <MESSAGE value="segunda entrega" />
     <MESSAGE value="Terceira Entrega" />
     <MESSAGE value="Fixes terceira" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes terceira" />
+    <MESSAGE value="Avanço quarta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avanço quarta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
