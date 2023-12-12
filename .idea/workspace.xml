@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="Avanço quarta">
+    <list default="true" id="72e219cf-4aba-4cb7-9f13-1d930e2c17ac" name="Changes" comment="finalizado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/app/storage/logs/package-log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/GenerateRouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sd/client/view/controllers/GenerateRouteController.java" afterDir="false" />
@@ -269,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700605618876</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finalizado">
+      <option name="closed" value="true" />
+      <created>1702346815971</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702346815971</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +307,8 @@
     <MESSAGE value="Terceira Entrega" />
     <MESSAGE value="Fixes terceira" />
     <MESSAGE value="Avanço quarta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avanço quarta" />
+    <MESSAGE value="finalizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalizado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

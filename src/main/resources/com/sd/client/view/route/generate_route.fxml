@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="399.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sd.client.view.controllers.GenerateRouteController">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sd.client.view.controllers.GenerateRouteController">
    <children>
       <ComboBox fx:id="destiny_cmb" layoutX="181.0" layoutY="39.0" prefWidth="150.0" />
       <ComboBox fx:id="origin_cmb" layoutX="22.0" layoutY="39.0" prefWidth="150.0" />
@@ -24,5 +24,6 @@
           <TableColumn fx:id="observation_cell" prefWidth="182.0" text="Observação" />
         </columns>
       </TableView>
+      <Button fx:id="back_btn" layoutX="400.0" layoutY="39.0" mnemonicParsing="false" onAction="#back" text="Voltar" />
    </children>
 </AnchorPane>
